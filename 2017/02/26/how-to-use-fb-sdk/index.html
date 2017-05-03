@@ -91,10 +91,13 @@
 <meta property="og:url" content="http://nickylin.github.io/2017/02/26/how-to-use-fb-sdk/index.html">
 <meta property="og:site_name" content="Nicky&#39;s Blog">
 <meta property="og:description" content="…">
-<meta property="og:updated_time" content="2017-05-01T12:49:42.000Z">
+<meta property="og:image" content="http://nickylin.github.io/2017/02/26/how-to-use-fb-sdk/media/14928672132998/14928678080176.jpg">
+<meta property="og:image" content="http://nickylin.github.io/2017/02/26/how-to-use-fb-sdk/media/14928672132998/14928679606159.jpg">
+<meta property="og:updated_time" content="2017-05-03T13:20:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何接入Facebook Sdk？">
 <meta name="twitter:description" content="…">
+<meta name="twitter:image" content="http://nickylin.github.io/2017/02/26/how-to-use-fb-sdk/media/14928672132998/14928678080176.jpg">
 
 
 
@@ -392,9 +395,9 @@
           
             <span class="post-letters-count">
               &nbsp; | &nbsp;
-              <span>22 字</span>
+              <span>729 字</span>
               &nbsp; | &nbsp;
-              <span>1 min</span>
+              <span>3 min</span>
             </span>
           
         </div>
@@ -409,6 +412,52 @@
 
       
         <p>…<br><a id="more"></a></p>
+<h3 id="客户端接入web端准备工作？"><a href="#客户端接入web端准备工作？" class="headerlink" title="客户端接入web端准备工作？"></a>客户端接入web端准备工作？</h3><p>开始实施 Facebook 登录之前，请确保已完成下列设置。</p>
+<ol>
+<li><p>下载 Facebook 应用<br>点击下方的按钮，下载 Facebook 应用。<br>下载 Android 版 Facebook</p>
+</li>
+<li><p>创建开发者帐户<br>如果没有 Facebook 开发者帐户，请点击下面的按钮创建。您可以通过 Facebook 开发者帐户使用开发者工具和创建 Facebook 应用。<br>创建开发者帐户</p>
+</li>
+<li>下载 Android SDK<br>下载最新的 Android 版 Facebook SDK。<br>下载 Android SDK</li>
+<li>获得 Facebook 应用编号、添加 SDK、以及向资料页添加密钥散列<br>点击下方的按钮，按照快速入门操作，也可以按照新手入门中的步骤操作。<br>Android 快速入门</li>
+<li><p>为应用启用单点登录<br>为应用启用单点登录的方法是：在 Facebook 开发者网站的我的应用中选择您的应用，然后选择应用的设置，并将单点登录设置为是。</p>
+<p><img src="media/14928672132998/14928678080176.jpg" alt=""></p>
+</li>
+</ol>
+<h3 id="客户端对接sdk逻辑"><a href="#客户端对接sdk逻辑" class="headerlink" title="客户端对接sdk逻辑"></a>客户端对接sdk逻辑</h3><p>Import SDK<br>Add compile ‘com.facebook.android:facebook-android-sdk:[4,5)’ to your build.gradle dependencies.<br>或者官方下载对应的aar放置到工程的lib下面</p>
+<p>Add SDK<br>Add your Facebook App ID to your app and update your Android manifest.</p>
+<ol>
+<li>Open your strings.xml file, for example: /app/src/main/res/values/strings.xml.</li>
+</ol>
+<ol>
+<li>Add a new string with the name facebook_app_id containing the value of your Facebook App ID:</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;string name=&quot;facebook_app_id&quot;&gt;19072045748&lt;/string&gt;</div></pre></td></tr></table></figure>
+<ol>
+<li><p>Open AndroidManifest.xml.</p>
+</li>
+<li><p>Add a uses-permission element to the manifest:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot;/&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Add a meta-data element to the application element:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;application android:label=&quot;@string/app_name&quot; ...&gt; ... &lt;meta-data android:name=&quot;com.facebook.sdk.ApplicationId&quot; android:value=&quot;@string/facebook_app_id&quot;/&gt; ... &lt;/application&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>fbActivity</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;activity</div><div class="line"> android:name=&quot;com.facebook.FacebookActivity&quot;</div><div class="line"> android:configChanges=&quot;keyboard|keyboardHidden|screenLayout|screenSize|orientation&quot;</div><div class="line"> android:label=&quot;@string/app_name&quot;</div><div class="line"> android:theme=&quot;@android:style/Theme.Translucent.NoTitleBar&quot; /&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li>Add your development and release key hashes</li>
+</ol>
+<p>客户端有个方法可生成</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"> /**</div><div class="line"> * 配置facebook 平台中app hash key时，需要用到</div><div class="line"> */</div><div class="line">public void getHashKey(String pkgName) &#123;</div><div class="line">    if (StringUtils.isEmpty(pkgName)) &#123;</div><div class="line">       pkgName = ContextManager.getPackageName();</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    try &#123;</div><div class="line">        PackageInfo info = ContextManager.getApplicationContext().getPackageManager().getPackageInfo(pkgName, PackageManager.GET_SIGNATURES);</div><div class="line">        for (android.content.pm.Signature signature : info.signatures) &#123;</div><div class="line">            MessageDigest md = MessageDigest.getInstance(&quot;SHA&quot;);</div><div class="line">            md.update(signature.toByteArray());</div><div class="line">            String sign = Base64.encodeToString(md.digest(), Base64.DEFAULT);</div><div class="line">            Log.e(TAG, &quot;facebook MY KEY HASH:&quot; + sign + &quot;, pkgname:&quot; + pkgName);</div><div class="line">        &#125;</div><div class="line">    &#125; catch (PackageManager.NameNotFoundException e) &#123;</div><div class="line">        e.printStackTrace();</div><div class="line">    &#125; catch (NoSuchAlgorithmException e) &#123;</div><div class="line">        e.printStackTrace();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="哪些权限需要审核？"><a href="#哪些权限需要审核？" class="headerlink" title="哪些权限需要审核？"></a>哪些权限需要审核？</h3><p>有关以下三种基本权限的请求不需要审核：public_profile、user_friends 和 email。<br>在用户登录应用时提出的其他权限请求则需要审核</p>
+<p> <img src="media/14928672132998/14928679606159.jpg" alt=""></p>
+<p>用户访问口令分为两种形式：短期有效口令和长期有效口令。短期有效口令的有效期通常为一两小时，长期有效口令的有效期通常为 60 天左右。有效期不会保持不变，可能在没有警告的情况下更改，也有可能很早过期。</p>
+<h3 id="关于接入FB广告"><a href="#关于接入FB广告" class="headerlink" title="关于接入FB广告"></a>关于接入FB广告</h3><p>后续专门一篇文章来解答</p>
+<blockquote>
+<p>如有不清晰,按照官方文档介绍一步步执行即可 <a href="https://developers.facebook.com/docs/facebook-login/android" target="_blank" rel="external">fb官方教程</a></p>
+</blockquote>
 <blockquote class="blockquote-center"><br>转载声明: 本文转载前需与<a href="mailto:nickylin1023@gmail.com" target="_blank" rel="external">作者</a>联系并标明文章出处<br></blockquote>
 
 
@@ -510,8 +559,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -564,6 +622,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端接入web端准备工作？"><span class="nav-text">客户端接入web端准备工作？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端对接sdk逻辑"><span class="nav-text">客户端对接sdk逻辑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#哪些权限需要审核？"><span class="nav-text">哪些权限需要审核？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于接入FB广告"><span class="nav-text">关于接入FB广告</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
