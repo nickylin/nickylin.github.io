@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="android,java,design pattern," />
+  <meta name="keywords" content="android,sqlite," />
 
 
 
@@ -84,17 +84,17 @@
 
 
 
-<meta name="description" content="最终开始写学习笔记，重新翻起几年前买的的书《headfrist-设计模式》，今天主要一起学习下策略模式。">
-<meta name="keywords" content="android,java,design pattern">
+<meta name="description" content="最近一直在搞数据层的设计，其中也在学习数据库相关的知识，也在琢磨GreenDAO相关的开源工具，其中有些心得体会。">
+<meta name="keywords" content="android,sqlite">
 <meta property="og:type" content="article">
-<meta property="og:title" content="设计模式学习笔记(一)-策略模式">
-<meta property="og:url" content="http://nickylin.github.io/2017/01/25/android-design-pattern-learning-B/index.html">
+<meta property="og:title" content="关于数据库">
+<meta property="og:url" content="http://nickylin.github.io/2017/05/03/aboutdao/index.html">
 <meta property="og:site_name" content="Nicky&#39;s Blog">
-<meta property="og:description" content="最终开始写学习笔记，重新翻起几年前买的的书《headfrist-设计模式》，今天主要一起学习下策略模式。">
-<meta property="og:updated_time" content="2017-05-01T12:49:42.000Z">
+<meta property="og:description" content="最近一直在搞数据层的设计，其中也在学习数据库相关的知识，也在琢磨GreenDAO相关的开源工具，其中有些心得体会。">
+<meta property="og:updated_time" content="2017-05-03T16:12:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="设计模式学习笔记(一)-策略模式">
-<meta name="twitter:description" content="最终开始写学习笔记，重新翻起几年前买的的书《headfrist-设计模式》，今天主要一起学习下策略模式。">
+<meta name="twitter:title" content="关于数据库">
+<meta name="twitter:description" content="最近一直在搞数据层的设计，其中也在学习数据库相关的知识，也在琢磨GreenDAO相关的开源工具，其中有些心得体会。">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://nickylin.github.io/2017/01/25/android-design-pattern-learning-B/"/>
+  <link rel="canonical" href="http://nickylin.github.io/2017/05/03/aboutdao/"/>
 
 
 
 
 
-  <title> 设计模式学习笔记(一)-策略模式 | Nicky's Blog </title>
+  <title> 关于数据库 | Nicky's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -289,7 +289,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://nickylin.github.io/2017/01/25/android-design-pattern-learning-B/">
+  <link itemprop="mainEntityOfPage" href="http://nickylin.github.io/2017/05/03/aboutdao/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="nicky">
@@ -313,7 +313,7 @@
             
             
               
-                设计模式学习笔记(一)-策略模式
+                关于数据库
               
             
           </h1>
@@ -326,8 +326,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-25T20:17:33+08:00">
-                2017-01-25
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-03T23:55:32+08:00">
+                2017-05-03
               </time>
             
 
@@ -345,8 +345,8 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Design-Pattern/" itemprop="url" rel="index">
-                    <span itemprop="name">Design Pattern</span>
+                  <a href="/categories/android/" itemprop="url" rel="index">
+                    <span itemprop="name">android</span>
                   </a>
                 </span>
 
@@ -360,8 +360,8 @@
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2017/01/25/android-design-pattern-learning-B/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/25/android-design-pattern-learning-B/" itemprop="commentCount"></span>
+                <a href="/2017/05/03/aboutdao/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/03/aboutdao/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -371,7 +371,7 @@
 
           
           
-             <span id="/2017/01/25/android-design-pattern-learning-B/" class="leancloud_visitors" data-flag-title="设计模式学习笔记(一)-策略模式">
+             <span id="/2017/05/03/aboutdao/" class="leancloud_visitors" data-flag-title="关于数据库">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -392,9 +392,9 @@
           
             <span class="post-letters-count">
               &nbsp; | &nbsp;
-              <span>1,003 字</span>
+              <span>488 字</span>
               &nbsp; | &nbsp;
-              <span>4 min</span>
+              <span>2 min</span>
             </span>
           
         </div>
@@ -408,43 +408,22 @@
       
 
       
-        <p>最终开始写学习笔记，重新翻起几年前买的的书《headfrist-设计模式》，今天主要一起学习下策略模式。</p>
-<a id="more"></a>
-<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>“如果公司给了这个需求：<br>模拟鸭子游戏，里面是各种各样的鸭子，有各种各样的玩法….<br>….”</p>
-<h3 id="思考实现"><a href="#思考实现" class="headerlink" title="思考实现"></a>思考实现</h3><p>一般我们的做法是写一个父类 Duck，思考鸭子共同的属性，然后让业务方继承Duck鸭子的基本属性来扩展。<br>咦？看起来做法不错哦。</p>
-<p>–突然，业务方提到一个新需求，我们需要让鸭子具备飞行的能力。<br>–额，没问题啊，我们在父类，扩展这种能力即可，子类来选择复用或者覆盖<br>–但是，加到父类里面，针对不会飞的鸭子类型，好像不太合理，并不是每种鸭子都具备飞的能力，咋办？</p>
-<p>–或者我们可以尝试，把飞行和叫的功能，独立成一个个接口功能即可，每个业务方去实现这些接口，然后自己去实现具体的逻辑即可？</p>
-<p>–but,这样，每个鸭子都需要自己去实现飞行的方法，或许这里飞行的方法是一致呢，导致不能复用，而且，不断新增功能，我们都需要在每个鸭子上面新增接口，会增加一堆接口。<br>–那还有什么方法呢？</p>
-<blockquote>
-<p><strong>设计原则</strong>：找出应用中可能变化之处，把他们独立出来，不要和那些不需要变化的代码混在一起。</p>
-</blockquote>
-<p>这个时候，我们需要把会变化的部分取出并封装起来，以便以后可能轻易改动或者扩充此部分，而不影响不需要变化的其他部分。</p>
-<p>也就是我们需要把鸭子的一些行为提取出来，比如，我们知道鸭子类里面的fly和quack方法不同的鸭子会不同，我们把这些行为独立出来。那具体怎样实现呢？</p>
-<p>我们利用接口代表每个行为，比如FlyBehavior和QuackBehavior，而行为的每个实现来依次实现其中的接口。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">class FlyWithWings implents FlyBehavior//会飞的</div><div class="line">class FlyNoWay implents FlyBehavior//不会飞的</div><div class="line"></div><div class="line">class Quack implents QuackBehavior//会叫的</div><div class="line">class MuteQuack implents QuackBehavior //静音的</div></pre></td></tr></table></figure>
-<p>这样，所有的特性被独立出来了，不同的鸭子选用不同的行为即可</p>
-<blockquote>
-<p><strong>设计原则</strong>：针对接口编程，而不是针对实现编程</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Duck</span> </span>&#123;</div><div class="line">  FlyBehavior mFlyBehavior;</div><div class="line">  QuackBehavior mQuackBehavior;</div><div class="line"></div><div class="line">   ....</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">performFly</span><span class="params">()</span></span>&#123;</div><div class="line">    mFlyBehavior.fly();</div><div class="line">  &#125;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">performQuack</span><span class="params">()</span></span>&#123;</div><div class="line">    mQuackBehavior.quack();</div><div class="line">  &#125; </div><div class="line">  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>那具体业务方怎么用呢？</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MuteDuck</span> <span class="title">extents</span> <span class="title">Duck</span></span>&#123;</div><div class="line"></div><div class="line">   <span class="comment">//构造的时候初始化行为实例</span></div><div class="line">   <span class="keyword">public</span> MuteDuck&#123;</div><div class="line">    mQuackBehavior = <span class="keyword">new</span> MuteQuackBehavior();</div><div class="line">    mFlyBehavior = <span class="keyword">new</span> FlyNoWayBehavior();</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>目前来看，貌似在构造的时候，就实例化这些，貌似也不是那么合理，感觉强绑定了，那还有其他方法吗？如何动态的设置行为属性呢？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//添加这几个方法</div><div class="line">   public void setFlyBehavior(FlyBehavior fb);</div><div class="line">   setxxx();</div></pre></td></tr></table></figure>
-<p>//这样，在实际调用就可以随便设置不同的行为模式进去了，而不是构造就绑定所有。</p>
-<p>每个鸭子都拥有FlyBehavior和QuackBehavior，鸭子的行为不是继承来的，而是和适当的行为对象组合来的，每个Behavior里面可以独立的类去实现扩展具体行为，而不在父类里面做具体实现，做到了自由组合和扩展，而不相互影响。</p>
-<blockquote>
-<p><strong>设计原则</strong>：多用组合，少用继承。</p>
-</blockquote>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><blockquote>
-<p><strong>策略模式</strong> 定义了算法族，分别封装起来，让他们之间可以互相替换，此模式让算法的变化独立于使用算法的客户。</p>
-</blockquote>
+        <p>最近一直在搞数据层的设计，其中也在学习数据库相关的知识，也在琢磨GreenDAO相关的开源工具，其中有些心得体会。<br><a id="more"></a></p>
 <ol>
-<li>找出应用中可能变化之处，把他们独立出来，不要和那些不需要变化的代码混在一起。</li>
-<li>针对接口编程，而不是针对实现编程</li>
-<li>多用组合，少用继承。</li>
-<li>同行里面用设计模式沟通，将事半功倍，设计圈的共同语言</li>
+<li><p>之前虽然听过很多ORM，但具体接触里面的设计，还是第一次，还是蛮有趣的</p>
+</li>
+<li><p>在接触GreenDAO的时候，让我对GreenRobot这个公司更加关注，虽然之前知道EventBus是他们家的</p>
+</li>
+<li><p>在查看他们官网的时候，发现他们有个工具库，虽然类不多，但有一定的参考意义，主要是设计了multilist和hashkey相关的，具有还没认真看，可查看：<a href="https://github.com/greenrobot/essentials" target="_blank" rel="external">https://github.com/greenrobot/essentials</a></p>
+</li>
+<li><p>另外最近关注，发现他们为了更优的数据存储，出品了ObjectBox的开源库，这个东东说完全抛弃了DAO，而采取自己设计的文件格式来存储数据，但对外可以做到具有和数据库一样的功能，可以增删改是，而且关键是说性能比数据库更好，他们为了提高性能，不得不抛弃数据库框架，而自己来实现一套，也是蛮牛b的，我也下载了他们demo和源码，其实里面的设计跟GreenDAO很像，主要是没有了数据建表等数据库操作，本来想看看牛b的代码实现，但发现很多核心代码是c实现的，估计这也是性能更高的一些缘故，数据处理存储等到了c++层实现，打开类似的db文件，发现已经协议加密，只能看到部分，无法正常解码查看，目前只推出了beta版，期待release版本的上线试用和推广，为了兼容Greendao，他们还出品了一个supportlib来提供讲greendao业务对接到ObjectBox里面。</p>
+</li>
 </ol>
+<blockquote>
+<p><a href="http://greenrobot.org/objectbox/" target="_blank" rel="external">http://greenrobot.org/objectbox/</a></p>
+</blockquote>
+<blockquote class="blockquote-center"><br>转载声明: 本文转载前需与<a href="mailto:nickylin1023@gmail.com" target="_blank" rel="external">作者</a>联系并标明文章出处<br></blockquote>
+
 
       
     </div>
@@ -470,9 +449,7 @@
           
             <a href="/tags/android/" rel="tag"># android</a>
           
-            <a href="/tags/java/" rel="tag"># java</a>
-          
-            <a href="/tags/design-pattern/" rel="tag"># design pattern</a>
+            <a href="/tags/sqlite/" rel="tag"># sqlite</a>
           
         </div>
       
@@ -481,8 +458,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/25/android-summary-articles-A/" rel="next" title="置顶文章 | 干货-Android技术精选文章集合贴">
-                <i class="fa fa-chevron-left"></i> 置顶文章 | 干货-Android技术精选文章集合贴
+              <a href="/2017/05/03/supercallback/" rel="next" title="超级callback类设计思想">
+                <i class="fa fa-chevron-left"></i> 超级callback类设计思想
               </a>
             
           </div>
@@ -490,10 +467,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/01/25/android-design-pattern-learning-mvp/" rel="prev" title="设计模式学习笔记(二)MVP">
-                设计模式学习笔记(二)MVP <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -519,8 +492,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/01/25/android-design-pattern-learning-B/"
-           data-title="设计模式学习笔记(一)-策略模式" data-url="http://nickylin.github.io/2017/01/25/android-design-pattern-learning-B/">
+      <div class="ds-thread" data-thread-key="2017/05/03/aboutdao/"
+           data-title="关于数据库" data-url="http://nickylin.github.io/2017/05/03/aboutdao/">
       </div>
     
   </div>
@@ -544,17 +517,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -607,22 +571,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#需求"><span class="nav-text">需求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思考实现"><span class="nav-text">思考实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
     </div>
