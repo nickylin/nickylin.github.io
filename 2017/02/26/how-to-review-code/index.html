@@ -91,7 +91,7 @@
 <meta property="og:url" content="http://nickylin.github.io/2017/02/26/how-to-review-code/index.html">
 <meta property="og:site_name" content="Nicky&#39;s Blog">
 <meta property="og:description" content="说到code review，每个程序员都必须面临，这一块到底有无什么技巧经验呢？">
-<meta property="og:updated_time" content="2017-05-01T12:49:42.000Z">
+<meta property="og:updated_time" content="2017-05-03T13:13:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android程序员如何做Code Review？">
 <meta name="twitter:description" content="说到code review，每个程序员都必须面临，这一块到底有无什么技巧经验呢？">
@@ -392,9 +392,9 @@
           
             <span class="post-letters-count">
               &nbsp; | &nbsp;
-              <span>50 字</span>
+              <span>554 字</span>
               &nbsp; | &nbsp;
-              <span>1 min</span>
+              <span>2 min</span>
             </span>
           
         </div>
@@ -408,7 +408,47 @@
       
 
       
-        <p>说到code review，每个程序员都必须面临，这一块到底有无什么技巧经验呢？<br><a id="more"></a></p>
+        <p>说到code review，每个程序员都必须面临，这一块到底有无什么技巧经验呢？<br><a id="more"></a><br>简单聊下自己在代码review的一些看法:</p>
+<h3 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h3><ol>
+<li>稳定性检查: 是否会空指针,添加判空</li>
+<li>格式转换异常: 针对数字转换类型,比如str-&gt; int等,尤其要关注,就算认为不可能,也要添加catch, 主要是很多数据是服务器来配置下发,客户端必须要考虑容错方案</li>
+<li>强转类型判断, 对应部分强转类型要用instant of</li>
+<li>弱引用的空指针隐患</li>
+<li>线程安全类型检查</li>
+<li>系统api的坑</li>
+</ol>
+<h3 id="业务逻辑"><a href="#业务逻辑" class="headerlink" title="业务逻辑"></a>业务逻辑</h3><ol>
+<li>针对业务使用是否妥当</li>
+<li>异常场景业务是否正常</li>
+</ol>
+<h3 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h3><ol>
+<li>使用部分api是否有性能问题</li>
+<li>第三方介入的api检测等</li>
+<li>低端机下的考虑</li>
+<li>不同android rom下是否有兼容性问题</li>
+<li>不同机器分辨率布局是否存在问题,考虑不周等</li>
+<li>包size是否有优化空间.图片是否经过预压缩</li>
+<li>内存泄漏风险</li>
+</ol>
+<h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><ol>
+<li>格式换行等是否符合规范</li>
+<li>静态变量\全局变量命名是否规范</li>
+<li>业务命名变量是否清晰</li>
+<li>方法命名是否足够清晰</li>
+<li>部分特殊的场景或者坑是否没有添加注释</li>
+</ol>
+<h3 id="架构设计"><a href="#架构设计" class="headerlink" title="架构设计"></a>架构设计</h3><ol>
+<li>有无重复造轮子,部分模块可直接使用,而不是重新提交一份</li>
+<li>模块设计是否清晰合理</li>
+<li>模块是否解耦\独立\具备组件化</li>
+<li>是否影响其他模块</li>
+</ol>
+<h3 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h3><ol>
+<li>覆盖安装场景</li>
+<li>全新安装场景</li>
+<li>…</li>
+</ol>
+<p>综上,会发现,一个review将会涉及到方方面面,而每一方面在不同人review都会有不同的侧重点,有些偏重了解你的业务,有些则会注重稳定性或者格式等,感觉每一次reivew,只要有人抽时间,都是对你的一次提高和大家的碰撞.</p>
 <blockquote class="blockquote-center"><br>转载声明: 本文转载前需与<a href="mailto:nickylin1023@gmail.com" target="_blank" rel="external">作者</a>联系并标明文章出处<br></blockquote>
 
 
@@ -510,8 +550,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -564,6 +613,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#稳定性"><span class="nav-text">稳定性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#业务逻辑"><span class="nav-text">业务逻辑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性能"><span class="nav-text">性能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#格式"><span class="nav-text">格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#架构设计"><span class="nav-text">架构设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#兼容性"><span class="nav-text">兼容性</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>

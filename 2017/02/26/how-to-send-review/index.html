@@ -91,7 +91,7 @@
 <meta property="og:url" content="http://nickylin.github.io/2017/02/26/how-to-send-review/index.html">
 <meta property="og:site_name" content="Nicky&#39;s Blog">
 <meta property="og:description" content="人人都会提代码review，怎样才是比较好的适合团队的方式呢？">
-<meta property="og:updated_time" content="2017-05-01T12:49:42.000Z">
+<meta property="og:updated_time" content="2017-05-03T13:14:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="你是怎样提交Code Review的？">
 <meta name="twitter:description" content="人人都会提代码review，怎样才是比较好的适合团队的方式呢？">
@@ -392,9 +392,9 @@
           
             <span class="post-letters-count">
               &nbsp; | &nbsp;
-              <span>46 字</span>
+              <span>704 字</span>
               &nbsp; | &nbsp;
-              <span>1 min</span>
+              <span>3 min</span>
             </span>
           
         </div>
@@ -409,6 +409,25 @@
 
       
         <p>人人都会提代码review，怎样才是比较好的适合团队的方式呢？<br><a id="more"></a></p>
+<h3 id="关于revision"><a href="#关于revision" class="headerlink" title="关于revision"></a>关于revision</h3><p>相信很多人以前跟我一样,是这样提交的:<br>比如:一开始同学A在branchA修改提交了部分代码diff1(revision:1)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">String a = &quot;abc&quot; + &quot;bcd&quot; + &quot;cccc&quot;</div><div class="line">String b = test;</div><div class="line">String c = b.getBytes();</div><div class="line">.....</div></pre></td></tr></table></figure>
+<p>提交到reviewboard给大家review的时候:</p>
+<p>同学B率先发现了空指针隐患,反馈给同学A,同学A马上修改代码提交为diff2:(revision2)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">String a = &quot;abc&quot; + &quot;bcd&quot; + &quot;cccc&quot;</div><div class="line">if (test != null) &#123;</div><div class="line">    String b = test;</div><div class="line">    String c = b.getBytes();</div><div class="line">.....</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>此时同学C有空了,也准备review同学A的需求代码,他就郁闷了,我是看diff1呢,还是看diff2即可? 一脸懵~</p>
+<p>如果在同学C之前已经有多次的修改呢? 就要把所有diff一遍遍过,但此时这些都是无用的产物,对于新的review同学,只需要关注你最后一次完整提交即可,不管你之前的版本</p>
+<p>所有,正确的发送review方式,应该是:</p>
+<ol>
+<li>保证每一次提交diff都是全量的,比如你基础revision是1, 下一次就要 1:x, 而不是x</li>
+<li>其他同学可在中途介入来查看你的信息,而不用关注全部,他们可以通过查看两个diff文件之间来查看你的修改差异,reviewboard提供了 diff between功能</li>
+</ol>
+<h3 id="关于文件类型"><a href="#关于文件类型" class="headerlink" title="关于文件类型"></a>关于文件类型</h3><p>一般情况,我们不建议把图片类型的或者二进制文件,提交到reviewboard,因为这些文件都无法正常显示,大家也无法帮忙review,私下自己记得提交即可,否则一次功能,会发现一堆diff文件,其实java文件就几个,会对reviewer造成视觉或者心理影响. 但是这个不是必须的,看大家共识而定.</p>
+<h3 id="关于描述"><a href="#关于描述" class="headerlink" title="关于描述"></a>关于描述</h3><p>review提交的时候,一般是有标题\简介部分<br>标题: [Feature] featureid: your feature name 功能开发类<br>     [Bugfix] bugid: xxxxx  bugfix类<br>     [Optimized] 代码优化重构类</p>
+<p>简介部分: 必须描述功能主要功能\ 1. 2. 3. 描述清楚,并且附上产品需求文档,必要的时候,写明测试通过某些部分等,这些在对于reviewer来说至关重要,因为他们的时间非常宝贵,他们很多是不熟悉你的需求文档的,不期望二次沟通来获取到他们关注的信息,所有发出去的时候,需要把必要的信息暴露出去,很多时候,也需要面对面review,一遍描述,一遍看diff.</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ol>
+<li>每一次review提交都是全量diff</li>
+<li>描述清楚review提交的内容信息,减少不必要的沟通成本</li>
+</ol>
 <blockquote class="blockquote-center"><br>转载声明: 本文转载前需与<a href="mailto:nickylin1023@gmail.com" target="_blank" rel="external">作者</a>联系并标明文章出处<br></blockquote>
 
 
@@ -510,8 +529,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -564,6 +592,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于revision"><span class="nav-text">关于revision</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于文件类型"><span class="nav-text">关于文件类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于描述"><span class="nav-text">关于描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
