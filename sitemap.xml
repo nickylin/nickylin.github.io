@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://nickylin.github.io/2017/05/03/supercallback/</loc>
+    
+    <lastmod>2017-05-03T15:49:59.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://nickylin.github.io/2017/02/26/how-to-use-fb-sdk/</loc>
     
     <lastmod>2017-05-03T13:24:26.000Z</lastmod>
@@ -191,14 +198,14 @@
   </url>
   
   <url>
-    <loc>http://nickylin.github.io/categories/index.html</loc>
+    <loc>http://nickylin.github.io/about/index.html</loc>
     
     <lastmod>2017-05-01T12:49:42.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://nickylin.github.io/about/index.html</loc>
+    <loc>http://nickylin.github.io/categories/index.html</loc>
     
     <lastmod>2017-05-01T12:49:42.000Z</lastmod>
     
