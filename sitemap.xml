@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://nickylin.github.io/2017/05/22/instantapp/</loc>
+    
+    <lastmod>2017-05-22T15:50:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://nickylin.github.io/music/index.html</loc>
     
     <lastmod>2017-05-04T16:19:11.000Z</lastmod>
@@ -51,7 +58,7 @@
   </url>
   
   <url>
-    <loc>http://nickylin.github.io/2017/01/25/android-design-pattern-learning-mvp/</loc>
+    <loc>http://nickylin.github.io/2017/01/25/android-summary-articles-A/</loc>
     
     <lastmod>2017-05-01T12:49:42.000Z</lastmod>
     
@@ -212,6 +219,13 @@
   </url>
   
   <url>
+    <loc>http://nickylin.github.io/categories/index.html</loc>
+    
+    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://nickylin.github.io/about/index.html</loc>
     
     <lastmod>2017-05-01T12:49:42.000Z</lastmod>
@@ -226,21 +240,14 @@
   </url>
   
   <url>
-    <loc>http://nickylin.github.io/categories/index.html</loc>
-    
-    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nickylin.github.io/2017/01/25/android-summary-articles-A/</loc>
-    
-    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://nickylin.github.io/tags/index.html</loc>
+    
+    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nickylin.github.io/2017/01/25/android-design-pattern-learning-mvp/</loc>
     
     <lastmod>2017-05-01T12:49:42.000Z</lastmod>
     
