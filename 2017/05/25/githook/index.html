@@ -84,17 +84,17 @@
 
 
 
-<meta name="description" content="Git Hook - Log Checkwe hope that the commit log is useful and standard, so we need checkany commit log before some code push to gitlab, so we create ‘log check‘">
+<meta name="description" content="We hope that the commit log is useful and standard, so we need checkany commit log before some code push to gitlab, so we create ‘log check‘">
 <meta name="keywords" content="git,gitlab,hook,review">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git hook for log check">
+<meta property="og:title" content="Git Hook For Log Check">
 <meta property="og:url" content="http://nickylin.github.io/2017/05/25/githook/index.html">
 <meta property="og:site_name" content="Nicky&#39;s Blog">
-<meta property="og:description" content="Git Hook - Log Checkwe hope that the commit log is useful and standard, so we need checkany commit log before some code push to gitlab, so we create ‘log check‘">
-<meta property="og:updated_time" content="2017-05-25T16:03:01.000Z">
+<meta property="og:description" content="We hope that the commit log is useful and standard, so we need checkany commit log before some code push to gitlab, so we create ‘log check‘">
+<meta property="og:updated_time" content="2017-05-25T16:05:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git hook for log check">
-<meta name="twitter:description" content="Git Hook - Log Checkwe hope that the commit log is useful and standard, so we need checkany commit log before some code push to gitlab, so we create ‘log check‘">
+<meta name="twitter:title" content="Git Hook For Log Check">
+<meta name="twitter:description" content="We hope that the commit log is useful and standard, so we need checkany commit log before some code push to gitlab, so we create ‘log check‘">
 
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <title> git hook for log check | Nicky's Blog </title>
+  <title> Git Hook For Log Check | Nicky's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -293,7 +293,7 @@
             
             
               
-                git hook for log check
+                Git Hook For Log Check
               
             
           </h1>
@@ -351,7 +351,7 @@
 
           
           
-             <span id="/2017/05/25/githook/" class="leancloud_visitors" data-flag-title="git hook for log check">
+             <span id="/2017/05/25/githook/" class="leancloud_visitors" data-flag-title="Git Hook For Log Check">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -372,7 +372,7 @@
           
             <span class="post-letters-count">
               &nbsp; | &nbsp;
-              <span>498 字</span>
+              <span>501 字</span>
               &nbsp; | &nbsp;
               <span>3 min</span>
             </span>
@@ -388,24 +388,25 @@
       
 
       
-        <h2 id="Git-Hook-Log-Check"><a href="#Git-Hook-Log-Check" class="headerlink" title="Git Hook - Log Check"></a>Git Hook - Log Check</h2><p>we hope that the commit log is useful and standard, so we need check<br>any commit log before some code push to gitlab, so we create ‘<strong>log check</strong>‘<br><a id="more"></a></p>
-<h3 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h3><ul>
+        <p>We hope that the commit log is useful and standard, so we need check<br>any commit log before some code push to gitlab, so we create ‘<strong>log check</strong>‘<br><a id="more"></a></p>
+<h2 id="Git-Hook-Log-Check"><a href="#Git-Hook-Log-Check" class="headerlink" title="Git Hook - Log Check"></a>Git Hook - Log Check</h2><h3 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h3><ol>
 <li>you can define which kind of branch need to enable this check<br>just config this in pre-push file</li>
-</ul>
+</ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># log config here</div><div class="line">PRCTECT_BRANCH_DEVELOP = &apos;develop&apos;</div><div class="line">PRCTECT_BRANCH_MASTER = &apos;master&apos;</div><div class="line">...and more here</div></pre></td></tr></table></figure>
-<ul>
+<p>.</p>
+<ol>
 <li>you can custom config which temple you like to use for standard log, for example:</li>
-</ul>
+</ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">FEATURE: some feature dic</div><div class="line">REVIEWER: xxxname</div><div class="line">REVIEWURL:https://xxx.com/code/id</div></pre></td></tr></table></figure>
 <p>if we found that you commit lack of some key tag, it will block this push and show this message:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">➜  LogCheck git:(develop) git push</div><div class="line">Your branch which to push is &lt;develop&gt;, need to check</div><div class="line">You have 1 commits ahead of origin</div><div class="line">-----------------------------------------------------------</div><div class="line">| Error Info: commitId: abcd88d</div><div class="line">| commit log lack of key tag: REVIEWER</div><div class="line">| This project have enable Log Check function</div><div class="line">| Your commit is not pass the Log Check step</div><div class="line">| Plz check the Log Check temple:</div><div class="line">| FEATURE/OPTIMIZE/BUGFIX/NONCODE: xxx</div><div class="line">| REVIEWER: xxx</div><div class="line">| REVIEWURL: https://your—review-url.com/code/id</div><div class="line">| if you have any question of that, plz contact nicky</div><div class="line">-----------------------------------------------------------</div><div class="line">error: failed to push some refs to &apos;git@gitlab.xxx/githook.git&apos;</div></pre></td></tr></table></figure>
 <p>for example:</p>
 <p>some one commit log is </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">FEATURE: xxx</div></pre></td></tr></table></figure>
-<p>it will fail, cause it lack of REVIEWER &amp; REVIEWURL<br>so the hook will be block this push and remind you</p>
-<ul>
+<p>it will fail, cause it lack of REVIEWER &amp; REVIEWURL<br>so the hook will be block this push and remind you<br>.</p>
+<ol>
 <li>calculate how many commits of this push, you must make sure each commit log is<br>correct, otherwise, you can’t push success. we also e will remind you need to combine<br>the multi commits to just one, so that the log list line will be more useful and beautiful </li>
-</ul>
+</ol>
 <h3 id="How-to-use"><a href="#How-to-use" class="headerlink" title="How to use"></a>How to use</h3><p>git hook have many event in its lifecycle, so we choose the pre-push event, cause we will commit many times in local, all we need hook is that when they use git-push.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">pre-push</div><div class="line">post-push</div><div class="line">pre-xxx</div><div class="line">pre-commit</div><div class="line">..</div></pre></td></tr></table></figure>
 <ol>
@@ -497,7 +498,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/05/25/githook/"
-           data-title="git hook for log check" data-url="http://nickylin.github.io/2017/05/25/githook/">
+           data-title="Git Hook For Log Check" data-url="http://nickylin.github.io/2017/05/25/githook/">
       </div>
     
   </div>
