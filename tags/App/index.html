@@ -87,7 +87,7 @@
 <meta name="description" content="how to keep going">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Nicky&#39;s Blog">
-<meta property="og:url" content="http://nickylin.github.io/tags/App/index.html">
+<meta property="og:url" content="http://nickylin.github.io/tags/app/index.html">
 <meta property="og:site_name" content="Nicky&#39;s Blog">
 <meta property="og:description" content="how to keep going">
 <meta name="twitter:card" content="summary">
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://nickylin.github.io/tags/App/"/>
+  <link rel="canonical" href="http://nickylin.github.io/tags/app/"/>
 
 
 
 
 
-  <title> Tag: App | Nicky's Blog </title>
+  <title> Tag: app | Nicky's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -260,7 +260,7 @@
   <div id="posts" class="posts-collapse">
     <div class="collection-title">
       <h2 >
-        App
+        app
         <small>Tag</small>
       </h2>
     </div>
@@ -273,9 +273,9 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/2017/01/14/google-play-tips-devices-list/" itemprop="url">
+            <a class="post-title-link" href="/2017/05/22/instantapp/" itemprop="url">
               
-                <span itemprop="name">App For Google Play实用技巧(一)</span>
+                <span itemprop="name">Instant App in Google IO 2017</span>
               
             </a>
         
@@ -283,9 +283,65 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2017-01-14T20:54:41+08:00"
-              content="2017-01-14" >
-          01-14
+              datetime="2017-05-22T22:59:38+08:00"
+              content="2017-05-22" >
+          05-22
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/2017/02/11/my-travel-news-about-indo-A/" itemprop="url">
+              
+                <span itemprop="name">印尼见闻 | 一年半的收获</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-02-11T16:56:51+08:00"
+              content="2017-02-11" >
+          02-11
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/2017/01/26/how-to-build-design-from-0-to-1/" itemprop="url">
+              
+                <span itemprop="name">从0到1设计App通用框架(序言)</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-01-26T11:47:59+08:00"
+              content="2017-01-26" >
+          01-26
         </time>
       </div>
 
@@ -335,7 +391,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">32</span>
+              <span class="site-state-item-count">33</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -352,7 +408,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -604,56 +660,6 @@
               },
               error: function(counter, error) {
                 console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
-
-  
-
-  
-
-
-</body>
-</html>
-console.log('Failed to save Visitor num, with error message: ' + error.message);
               }
             });
           } else {

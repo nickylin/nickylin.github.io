@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://nickylin.github.io/2017/07/22/devices-and-network-for-intl/</loc>
+    
+    <lastmod>2017-07-22T01:35:04.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://nickylin.github.io/2017/05/25/githook/</loc>
     
     <lastmod>2017-05-25T16:05:24.000Z</lastmod>
@@ -65,34 +72,6 @@
   </url>
   
   <url>
-    <loc>http://nickylin.github.io/2017/01/18/design-patter-learning-start-A/</loc>
-    
-    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nickylin.github.io/2017/01/14/google-play-tips-devices-list/</loc>
-    
-    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nickylin.github.io/2017/01/15/hexo-config-1/</loc>
-    
-    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nickylin.github.io/2017/02/26/fb-sdk-intro/</loc>
-    
-    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://nickylin.github.io/2017/01/26/how-to-build-design-from-0-to-1/</loc>
     
     <lastmod>2017-05-01T12:49:42.000Z</lastmod>
@@ -100,14 +79,7 @@
   </url>
   
   <url>
-    <loc>http://nickylin.github.io/2017/01/14/android-apk-size-anaylaze/</loc>
-    
-    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nickylin.github.io/2017/01/25/android-design-pattern-learning-B/</loc>
+    <loc>http://nickylin.github.io/2017/02/25/personal-summary-about-2016/</loc>
     
     <lastmod>2017-05-01T12:49:42.000Z</lastmod>
     
@@ -115,62 +87,6 @@
   
   <url>
     <loc>http://nickylin.github.io/2017/02/13/how-to-del-with-it-way/</loc>
-    
-    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nickylin.github.io/2017/01/25/android-design-pattern-learning-mvp/</loc>
-    
-    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nickylin.github.io/2017/01/12/alibaba-open-source/</loc>
-    
-    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nickylin.github.io/2017/01/14/android-studio-plugs-introduce-1/</loc>
-    
-    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nickylin.github.io/2017/01/16/java-how-to-check-depends/</loc>
-    
-    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nickylin.github.io/2017/02/11/android-learning-page-gdd-cf/</loc>
-    
-    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nickylin.github.io/2017/02/11/my-travel-news-about-google-io-A/</loc>
-    
-    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nickylin.github.io/2017/02/11/my-travel-news-about-google-io-B/</loc>
-    
-    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://nickylin.github.io/2017/02/11/my-travel-news-about-google-io-C/</loc>
     
     <lastmod>2017-05-01T12:49:42.000Z</lastmod>
     
@@ -191,28 +107,105 @@
   </url>
   
   <url>
-    <loc>http://nickylin.github.io/2017/02/25/personal-summary-about-2016/</loc>
+    <loc>http://nickylin.github.io/2017/02/11/my-travel-news-about-google-io-C/</loc>
     
     <lastmod>2017-05-01T12:49:42.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://nickylin.github.io/2016/12/21/test-1/</loc>
+    <loc>http://nickylin.github.io/2017/02/11/my-travel-news-about-google-io-B/</loc>
     
     <lastmod>2017-05-01T12:49:42.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://nickylin.github.io/2017/01/25/android-summary-articles-A/</loc>
+    <loc>http://nickylin.github.io/2017/02/11/my-travel-news-about-google-io-A/</loc>
     
     <lastmod>2017-05-01T12:49:42.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://nickylin.github.io/2016/12/16/toolfor/</loc>
+    <loc>http://nickylin.github.io/2017/02/11/android-learning-page-gdd-cf/</loc>
+    
+    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nickylin.github.io/2017/02/26/fb-sdk-intro/</loc>
+    
+    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nickylin.github.io/2017/01/25/android-design-pattern-learning-mvp/</loc>
+    
+    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nickylin.github.io/2017/01/25/android-design-pattern-learning-B/</loc>
+    
+    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nickylin.github.io/2017/01/19/java-interface-and-abstract-class/</loc>
+    
+    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nickylin.github.io/2017/01/18/design-patter-learning-start-A/</loc>
+    
+    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nickylin.github.io/2017/01/16/java-how-to-check-depends/</loc>
+    
+    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nickylin.github.io/2017/01/15/hexo-config-1/</loc>
+    
+    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nickylin.github.io/2017/01/14/google-play-tips-devices-list/</loc>
+    
+    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nickylin.github.io/2017/01/14/android-studio-plugs-introduce-1/</loc>
+    
+    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nickylin.github.io/2017/01/14/android-apk-size-anaylaze/</loc>
+    
+    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nickylin.github.io/2017/01/12/alibaba-open-source/</loc>
     
     <lastmod>2017-05-01T12:49:42.000Z</lastmod>
     
@@ -226,14 +219,14 @@
   </url>
   
   <url>
-    <loc>http://nickylin.github.io/categories/index.html</loc>
+    <loc>http://nickylin.github.io/2016/12/21/test-1/</loc>
     
     <lastmod>2017-05-01T12:49:42.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://nickylin.github.io/about/index%20-%20%E5%89%AF%E6%9C%AC.html</loc>
+    <loc>http://nickylin.github.io/2016/12/16/toolfor/</loc>
     
     <lastmod>2017-05-01T12:49:42.000Z</lastmod>
     
@@ -247,14 +240,28 @@
   </url>
   
   <url>
-    <loc>http://nickylin.github.io/tags/index.html</loc>
+    <loc>http://nickylin.github.io/about/index%20-%20%E5%89%AF%E6%9C%AC.html</loc>
     
     <lastmod>2017-05-01T12:49:42.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://nickylin.github.io/2017/01/19/java-interface-and-abstract-class/</loc>
+    <loc>http://nickylin.github.io/categories/index.html</loc>
+    
+    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nickylin.github.io/2017/01/25/android-summary-articles-A/</loc>
+    
+    <lastmod>2017-05-01T12:49:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://nickylin.github.io/tags/index.html</loc>
     
     <lastmod>2017-05-01T12:49:42.000Z</lastmod>
     
