@@ -93,7 +93,7 @@
 <meta property="og:description" content="或许大家都知道，做国际市场，你面临的是更复杂的设备属性，习惯了国内的环境，大家觉得还有人在用低于512M Ram的机器不可思议，但是这批用户，正是国际的主力军，尤其是针对东南亚市场，那么如何来针对这批机器来做优化呢？">
 <meta property="og:image" content="https://raw.githubusercontent.com/facebook/device-year-class/master/docs/images/popular_devices_by_year_class.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/facebook/device-year-class/master/docs/images/popular_devices_by_year_class.png">
-<meta property="og:updated_time" content="2017-07-22T01:35:04.000Z">
+<meta property="og:updated_time" content="2017-07-22T01:54:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面对国外复杂的设备和渣渣网络，开发者如何应对？">
 <meta name="twitter:description" content="或许大家都知道，做国际市场，你面临的是更复杂的设备属性，习惯了国内的环境，大家觉得还有人在用低于512M Ram的机器不可思议，但是这批用户，正是国际的主力军，尤其是针对东南亚市场，那么如何来针对这批机器来做优化呢？">
@@ -375,9 +375,9 @@
           
             <span class="post-letters-count">
               &nbsp; | &nbsp;
-              <span>548 字</span>
+              <span>974 字</span>
               &nbsp; | &nbsp;
-              <span>2 min</span>
+              <span>4 min</span>
             </span>
           
         </div>
@@ -397,10 +397,34 @@
 <p>回到主题，我们做某些酷炫动画，比如某些下拉回弹，页面切换，粒子效果绘制的时候，我们需要评估用户设备的承受度，该不该用高清图绘制，该不该去除部分复杂动画效果？</p>
 <p>可能你会说，我们可以给出一个标准，让一批用户来开启，一批用户关闭，甚至我们给出一个设置开关项，来让用户自由选择。确实，我们也这样干过，但是，这样真的够智能了吗？ 难道用户需要体验完，还要寻寻觅觅到你设置开关项，找到关闭动画，才能摆脱卡顿。难道我们不可以运行时，检测到设备的场景吗?</p>
 <p>答案是可以的，当时我们有相关自己定义的性能参数，比如内存，分辨率大小等来定义我们是否开启关闭AC渲染等，另外其实facebook内部也有类似的，那就是<strong>device-year-class</strong></p>
-<ul>
-<li>what is device year class?</li>
+<h2 id="what-is-device-year-class"><a href="#what-is-device-year-class" class="headerlink" title="what is device year class?"></a><strong>what is device year class?</strong></h2><p><img src="https://raw.githubusercontent.com/facebook/device-year-class/master/docs/images/popular_devices_by_year_class.png" alt="ss"></p>
+<p>它是facebook官方推出的开源工具，主要用于通过检测手机上面的各种参数，来评估当前设备的‘上市年份’<br><a href="https://github.com/facebook/device-year-class" target="_blank" rel="external">github地址</a></p>
+<h2 id="what-can-this-do"><a href="#what-can-this-do" class="headerlink" title="what can this do?"></a><strong>what can this do?</strong></h2><ul>
+<li>检测出不同设备的上市年份，比如2009 2012 2013 2014等</li>
+<li>利用年份参数。来形象映射描述出设备的性能，大家都知道，越早上市的手机，性能也差，反之越好，这是社会规律，我们可以用统计字段来收集，进而评估我们用户群体收集的性能情况<br>Mappings as of this writing (RAM is a ceiling):</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/facebook/device-year-class/master/docs/images/popular_devices_by_year_class.png" alt="ss"></p>
+<p>RAM    condition    Year Class<br>768MB    1 core    2009<br>2+ cores    2010<br>1GB    &lt;1.3GHz    2011<br>1.3GHz+    2012<br>1.5GB    &lt;1.8GHz    2012<br>1.8GHz+    2013<br>2GB        2013<br>3GB        2014<br>more        2015</p>
+<ul>
+<li>针对不同年份的手机，来开启关闭某些动画效果等</li>
+</ul>
+<p><strong>how to use</strong></p>
+<ul>
+<li>compile in your project</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile &apos;com.facebook.device.yearclass:yearclass:2.0.0&apos;</div></pre></td></tr></table></figure>
+<ul>
+<li>set up in your code</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">int year = YearClass.get(getApplicationContext());</div><div class="line">//Then, later on, you can use the year class to make decisions in your app, or send it along with your analytics.</div><div class="line"></div><div class="line">if (year &gt;= 2013) &#123;</div><div class="line">    // Do advanced animation</div><div class="line">&#125; else if (year &gt; 2010) &#123;</div><div class="line">    // Do simple animation</div><div class="line">&#125; else &#123;</div><div class="line">    // Phone too slow, don&apos;t do any animations</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>stat your device year data</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">//upload year class data in your form to anylaze</div></pre></td></tr></table></figure>
+<p>整体下来，介入非常简单，快捷，大家也可以进入sample版来体验试玩，不过，目前来，year-class也存在一些缺陷：</p>
+<ul>
+<li>仅仅采取了cpu核数，时钟频率，内存维度，对于某些情况，我们可能还需要分辨率大小，比如耗电 渲染等</li>
+<li>这个更多的也是静态设备分析，并不能很好的衡量用户app当前运行的实时状态，比如可用内存过低，cpu时间片给切割严重等实时场景</li>
+</ul>
 <h3 id="网络复杂度高"><a href="#网络复杂度高" class="headerlink" title="网络复杂度高"></a>网络复杂度高</h3><h3 id="如何解决"><a href="#如何解决" class="headerlink" title="如何解决"></a>如何解决</h3><blockquote class="blockquote-center"><br>转载声明: 本文转载前需与<a href="mailto:nickylin1023@gmail.com" target="_blank" rel="external">作者</a>联系并标明文章出处<br></blockquote>
 
 
@@ -573,7 +597,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#设备复杂度高"><span class="nav-text">设备复杂度高</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络复杂度高"><span class="nav-text">网络复杂度高</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何解决"><span class="nav-text">如何解决</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#设备复杂度高"><span class="nav-text">设备复杂度高</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#what-is-device-year-class"><span class="nav-text">what is device year class?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#what-can-this-do"><span class="nav-text">what can this do?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#网络复杂度高"><span class="nav-text">网络复杂度高</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何解决"><span class="nav-text">如何解决</span></a></li></ol></div>
             
 
           </div>
