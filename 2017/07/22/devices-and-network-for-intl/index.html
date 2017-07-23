@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://ojrvy4q2a.bkt.clouddn.com/images/network1.png">
 <meta property="og:image" content="http://ojrvy4q2a.bkt.clouddn.com/images/network3.png">
 <meta property="og:image" content="http://ojrvy4q2a.bkt.clouddn.com/images/network2.png">
-<meta property="og:updated_time" content="2017-07-23T07:31:45.000Z">
+<meta property="og:updated_time" content="2017-07-23T07:40:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面对国外复杂的设备和渣渣网络，开发者如何应对？">
 <meta name="twitter:description" content="目前我们针对国际市场，主要面临两大难题：">
@@ -403,9 +403,11 @@
 <p>回到主题，我们做某些酷炫动画，比如某些下拉回弹，页面切换，粒子效果绘制的时候，我们需要评估用户设备的承受度，该不该用高清图绘制，该不该去除部分复杂动画效果？</p>
 <p>可能你会说，我们可以给出一个标准，让一批用户来开启，一批用户关闭，甚至我们给出一个设置开关项，来让用户自由选择。确实，我们也这样干过，但是，这样真的够智能了吗？ 难道用户需要体验完，还要寻寻觅觅到你设置开关项，找到关闭动画，才能摆脱卡顿。难道我们不可以运行时，检测到设备的场景吗?</p>
 <p>答案是可以的，当时我们有相关自己定义的性能参数，比如内存，分辨率大小等来定义我们是否开启关闭AC渲染等，另外其实facebook内部也有类似的，那就是<strong>device-year-class</strong></p>
-<h2 id="what-is-device-year-class"><a href="#what-is-device-year-class" class="headerlink" title="what is device year class?"></a><strong>what is device year class?</strong></h2><p><img src="https://raw.githubusercontent.com/facebook/device-year-class/master/docs/images/popular_devices_by_year_class.png" alt="ss"></p>
+<h4 id="what-is-device-year-class"><a href="#what-is-device-year-class" class="headerlink" title="what is device year class?"></a><strong>what is device year class?</strong></h4><hr>
+<p><img src="https://raw.githubusercontent.com/facebook/device-year-class/master/docs/images/popular_devices_by_year_class.png" alt="ss"></p>
 <p>它是facebook官方推出的开源工具，主要用于通过检测手机上面的各种参数，来评估当前设备的‘上市年份’<br><a href="https://github.com/facebook/device-year-class" target="_blank" rel="external">github地址</a></p>
-<h2 id="what-can-this-do"><a href="#what-can-this-do" class="headerlink" title="what can this do?"></a><strong>what can this do?</strong></h2><ul>
+<h4 id="what-can-this-do"><a href="#what-can-this-do" class="headerlink" title="what can this do?"></a><strong>what can this do?</strong></h4><hr>
+<ul>
 <li>检测出不同设备的上市年份，比如2009 2012 2013 2014等</li>
 <li>利用年份参数。来形象映射描述出设备的性能，大家都知道，越早上市的手机，性能也差，反之越好，这是社会规律，我们可以用统计字段来收集，进而评估我们用户群体收集的性能情况</li>
 </ul>
@@ -469,7 +471,8 @@
 <ul>
 <li>针对不同年份的手机，来开启关闭某些动画效果等</li>
 </ul>
-<h2 id="how-to-use"><a href="#how-to-use" class="headerlink" title="how to use"></a><strong>how to use</strong></h2><ul>
+<h4 id="how-to-use"><a href="#how-to-use" class="headerlink" title="how to use"></a><strong>how to use</strong></h4><hr>
+<ul>
 <li>compile in your project</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile &apos;com.facebook.device.yearclass:yearclass:2.0.0&apos;</div></pre></td></tr></table></figure>
@@ -712,7 +715,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#用户手机设备复杂度高"><span class="nav-text">用户手机设备复杂度高</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#what-is-device-year-class"><span class="nav-text">what is device year class?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#what-can-this-do"><span class="nav-text">what can this do?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#how-to-use"><span class="nav-text">how to use</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用户网络复杂度高"><span class="nav-text">用户网络复杂度高</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-具备实时网络质量衡量的标准"><span class="nav-text">1 具备实时网络质量衡量的标准</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-针对复杂网络来实时体验优化产品"><span class="nav-text">2 针对复杂网络来实时体验优化产品</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-其他维度："><span class="nav-text">3 其他维度：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#用户手机设备复杂度高"><span class="nav-text">用户手机设备复杂度高</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#what-is-device-year-class"><span class="nav-text">what is device year class?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#what-can-this-do"><span class="nav-text">what can this do?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#how-to-use"><span class="nav-text">how to use</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用户网络复杂度高"><span class="nav-text">用户网络复杂度高</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-具备实时网络质量衡量的标准"><span class="nav-text">1 具备实时网络质量衡量的标准</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-针对复杂网络来实时体验优化产品"><span class="nav-text">2 针对复杂网络来实时体验优化产品</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-其他维度："><span class="nav-text">3 其他维度：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
